@@ -1,0 +1,17 @@
+appId: com.qazandoqafood
+---
+- launchApp
+- tapOn:
+    id: "email"
+- inputText: "teste@teste.com"
+- tapOn:
+    id: "password"
+- inputText: "123456"
+- tapOn:
+    id: "login-button"
+- assertVisible: "Selecione seu endereço..."
+- scrollUntilVisible:
+    element: "Bulldog Hamburgueria"
+    direction: DOWN
+- tapOn: "Bulldog Hamburgueria"
+- assertVisible: "Ops... Selecione o endereço para continuar"
